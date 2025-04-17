@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeSecret - Predictive Stock Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="StockPulse AI Logo">
+                <h1>TradeSecret</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="https://github.com/ashishbongu/SWE_Project">About</a></li>
+                    <li><a href="mailto:23bds014@iiitdwd.ac.in">CONTACT US</a></li>
+                    <li><a href="{{ url_for('login') }}" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Predict with Precision, Invest with Confidence</h1>
+                <p>A LSTM Based stock prediction model and Sentiment Analysis of business news using Finbert model</p>
+                <a href="{{ url_for('login') }}" class="cta-button">Start Predicting Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='pngegg.png') }}" alt="Stock Chart Visualization">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Powerful Prediction Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="{{ url_for('static', filename='forecast.png') }}" alt="Prediction Icon">
+                    <h3>Intelligent Price Forecasting</h3>
+                    <p>Uses LSTM model to predict future stock prices with high accuracy</p>
+                </div>
+                <div class="feature-card">
+                    <img src="{{ url_for('static', filename='feedback.png') }}" alt="Sentiment Icon">
+                    <h3>Market Sentiment Analysis</h3>
+                    <p>Gauge market sentiment through AI-powered news and social media analysis</p>
+                </div>
+                <div class="feature-card">
+                    <img src="{{ url_for('static', filename='info.png') }}" alt="Information Icon">
+                    <h3>Comprehensive Company Data</h3>
+                    <p>Access detailed financial information and performance metrics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p> Note: This software is in development stage .</p>
+        </div>
+    </footer>
+</body>
+</html>
